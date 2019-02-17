@@ -1,9 +1,9 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
 {% block content %}
-<h1>Home Page</h1>
-{% for post in posts %}
-<h2>{{ post.title }}</h2>
-<p>By {{ post.author }} on {{ post.date_posted }}</p>
-<p>{{ post.content }}</p>
-{% endfor %}
+<div class="jumbotron text-center">
+    <h1>Welcome To My Flask Blog</h1>
+    <p class="lead">This web app is build on the Python Flask framework and it's focus is on Python Development</p>
+</div>
+{% include 'includes/_featuredarticles.html' %}
+
 {% endblock content %}
