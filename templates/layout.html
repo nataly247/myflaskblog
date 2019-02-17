@@ -21,8 +21,18 @@
 </head>
 
 <body>
-    {% block content %}{% endblock %}
-
+    {% include 'includes/_header.html' %}
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col-md-4">
+                {% include 'includes/_sidebar.html' %}
+            </div>
+        </div>
+    </main>
+    {% include 'includes/_footer.html' %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
