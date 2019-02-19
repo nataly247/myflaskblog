@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
+.bg-steel {
+  background-color: #404753;
+}
+
 .site-header .navbar-nav .nav-link {
   color: #cbd5db;
 }
@@ -28,6 +32,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
+.footer-dark{
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+.footer-dark a, .footer-dark a:focus, .footer-dark a:active {
+    color: #ffffff;
+}
+
+footer p {
+  padding-top: 1rem;
+}
 
 
 .account-heading {

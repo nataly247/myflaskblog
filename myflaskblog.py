@@ -3,6 +3,7 @@ from flask import render_template
 from flask import url_for, flash, redirect
 from forms import RegistrationForm, LoginForm
 
+from posts import posts
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
@@ -11,7 +12,7 @@ app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template('home.html')
+    return render_template('home.html', myposts=posts)
 
 
 @app.route('/about')
