@@ -21,9 +21,22 @@
         <a href="#" class="btn btn-primary">Read More</a>
     </div>
 </div>
-{% for post in posts %}
-<h2>{{ post.get('title') }}</h2>
-<p>By {{ post.get('author') }} on {{ post.get('date_posted') }}</p>
-<p>{{ post.get('content') }}</p>
-{% endfor %}
+<h2>Blog Posts</h2>
+<div class="card">
+    <div class="card-header">
+        Latest
+    </div>
+    <div class="card-body">
+        {% for post in myposts %}
+
+        <h5 class="card-title">{{ post.get('title') }}</h5>
+        <small class="text-muted">
+            <p class="card-text">By {{ post.get('author') }} on {{ post.get('date_posted') }}</p>
+        </small>
+        <p class="card-text">{{ post.get('content') }}</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+        <hr>
+        {% endfor %}
+    </div>
+</div>
 {% endblock content %}
